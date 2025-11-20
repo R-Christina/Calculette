@@ -30,7 +30,9 @@ jobs:
           ${{ runner.os }}-maven-
 
     - name: Compile code
+      working-directory: demo
       run: mvn clean install
 
     - name: Run tests
+      working-directory: demo
       run: mvn test
